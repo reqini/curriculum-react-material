@@ -1,0 +1,12 @@
+@mixin fadeOn($opacityto,$opacityfrom,$time) {
+  animation: fade $time ease-in-out;
+
+  @keyframes fade{
+      0%{
+        opacity: $opacityto;
+      }
+      100%{
+        opacity: $opacityfrom;
+      }
+  }
+}
