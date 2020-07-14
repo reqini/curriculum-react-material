@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import Routing from "./Routing";
-import "./styles/scss/global.scss";
+import "./styles/global.scss";
 
 const theme = createMuiTheme({
-  //type: "dark",
   palette: {
     type: 'dark', // Switching the dark mode on is a single property value change.
     primary: {

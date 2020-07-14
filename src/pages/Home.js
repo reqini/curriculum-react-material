@@ -1,9 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
-
 // Material
-import { withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import { CardContent } from '@material-ui/core';
@@ -11,13 +8,12 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 import Typography from '@material-ui/core/Typography';
-
 // Components
-import Experience from '../components/Templates/experience';
-import Education from '../components/Templates/education';
-import Data from '../components/Templates/dates';
+import Experience from '../components/experience';
+import Education from '../components/education';
+import Data from '../components/dates';
 
-const styles = theme => ({
+const useStyles = makeStyles( (theme) => ({
   heroContent: {
     maxWidth: 600,
     margin: '0 auto',
@@ -68,16 +64,17 @@ const styles = theme => ({
     color: 'black',
     background: '#ccc'
   }
-});
+}));
 
-function Home(props) {
-  const { classes } = props;
+export default function Home() {
+
+  const classes = useStyles();
 
   return (
     <React.Fragment>
       <CssBaseline />
-      <div className={classNames(classes.layout, classes.cardGrid)}>
-        <Grid container spacing={16}>
+      <div className={`${classes.layout} ${classes.cardGrid}`}>
+        <Grid container spacing={2}>
           <Grid item xs={12}>
             <Card className={classes.card}>
               <Avatar alt="Remy Sharp" src="https://cdn.iconscout.com/icon/free/png-256/avatar-375-456327.png" className={classes.avatar} />
@@ -150,9 +147,3 @@ function Home(props) {
     </React.Fragment>
   );
 }
-
-Home.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(Home);
