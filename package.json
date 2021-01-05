@@ -7,7 +7,7 @@
     "@material-ui/icons": "^4.0.0",
     "@material-ui/lab": "^3.0.0-alpha.30",
     "@material-ui/styles": "^4.0.0",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "formik": "^1.4.3",
     "grunt-contrib-watch": "^1.1.0",
     "load-grunt-tasks": "^4.0.0",
